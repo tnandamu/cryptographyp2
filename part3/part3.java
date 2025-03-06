@@ -12,6 +12,7 @@ public class part3 {
         0.001, 0.060, 0.063, 0.091, 0.028, 0.010, 0.023, 0.001,
         0.020, 0.001
     };
+    
 
     /*
      * Main method: Defines the ciphertext, Determines the encryption key length.
