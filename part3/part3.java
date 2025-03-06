@@ -13,7 +13,6 @@ public class part3 {
         0.020, 0.001
     };
     
-
     /*
      * Main method: Defines the ciphertext, Determines the encryption key length.
      * Recovers the encryption key, Decrypts the message, and Prints 
