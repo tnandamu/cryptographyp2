@@ -1,3 +1,9 @@
+// Tarun Nandamudi, Anne Fu, Dhruv Shah, Stephen Argauer
+
+/* 
+ * The following code can be run in a Java Project and attempts to decrypt a ciphertext 
+ * encrypted by the Vigenère Cipher.
+ */
 public class part3 {
     // English letter frequencies
     private static final double[] ENGLISH_FREQ = {
@@ -6,7 +12,12 @@ public class part3 {
         0.001, 0.060, 0.063, 0.091, 0.028, 0.010, 0.023, 0.001,
         0.020, 0.001
     };
-    
+
+    /*
+     * Main method: Defines the ciphertext, Determines the encryption key length.
+     * Recovers the encryption key, Decrypts the message, and Prints 
+     * the key and the decrypted text.
+     */
     public static void main(String[] args) {
         String ciphertext = 
                 "KBWWMRSINEXVVGWDMLBKUVBSLJGWEUFWEKDCUDPIAKSYUHUOAKNWWBQHIILXKVAEALAMNA" +
@@ -27,14 +38,18 @@ public class part3 {
                 "RXVKMUKVMSETQXKBWFCNLZJDXKQEGYLBVIUFHUXZPKKBSMPCNVVWXVVZVZGVCUGWMGFCEZ" +
                 "UYTTBGTLNOXKCFRFDTOTWVNZTBYWNCDEVGWUIFZWKFXBGGMULRHVBVHGIGWWXWTCCUWMDS" +
                 "KYSUWWLYIOUMULKIHKWVWTNDBJGJKSSGLUWTOJBBAAEVGMPQMIFSPACFUIMKBGUYHGEWIQ";
+        
         int keyLength = getKeyLength(ciphertext);
         String key = getKey(ciphertext, keyLength);
         System.out.println("Found key: " + key);
+        
         String decryptedText = decrypt(ciphertext, key);
         System.out.println(decryptedText);
     }
 
-
+/*
+ * Determines the key length for the Vigenère Cipher
+ */
     private static int getKeyLength(String ciphertext) {
         // Expected IC for English text
         final double ENGLISH_IC = 0.065;
@@ -44,6 +59,7 @@ public class part3 {
         
         System.out.println("Testing potential key lengths:");
         
+        // Try key lengths 6 to 8
         for (int len = 6; len < 9; len++) {
             System.out.println("Key Length of " + len);
             String[] subsequences = new String[len];
@@ -76,6 +92,9 @@ public class part3 {
         return bestLength;
     }
 
+    /*
+     * Calculates the index of coincidence for a given text
+     */
     public static double calculateIC(String text) {
         // Count letter frequencies
         int[] frequencies = new int[26];
@@ -98,6 +117,9 @@ public class part3 {
         return sum / (totalLength * (totalLength - 1));
     }
     
+    /*
+     * Determines the key for the Vigenère Cipher
+     */
     private static String getKey(String ciphertext, int keyLength){
         char[] key = new char[keyLength];
         
@@ -106,8 +128,10 @@ public class part3 {
             String subsequence = extractSubsequence(ciphertext, keyLength, i);
             // calc the frequencies with calculateFrequencies method
             double[] freq = calculateFrequencies(subsequence);
-            // calc the Mg values for each shift g
+            // calc the Mg (match goodness) values for each shift g
             double[] mgValues = new double[26];
+
+            // calculate Mg values
             for (int g = 0; g < 26; g++) {
                 double[] shiftedFreq = shiftFrequencies(freq, g);
                 mgValues[g] = dotProduct(ENGLISH_FREQ, shiftedFreq);
@@ -128,12 +152,16 @@ public class part3 {
             key[i] = (char)('A' + maxShift);
             System.out.printf("\nKey letter for position %d: %c (shift=%d)\n\n", i+1, key[i], maxShift);
         }
+
         return new String(key);
     }
 
-    // extracts subsequence for the give offset (i.e. i = 0, 1, etc.)
+    /*
+     * extracts subsequence for the give offset (i.e. i = 0, 1, etc.)
+     */ 
     private static String extractSubsequence(String text, int keyLength, int offset) {
         StringBuilder sb = new StringBuilder();
+
         // gets every letter from the given i or offset that would appear in the subsequence
         for (int j = offset; j < text.length(); j += keyLength) {
             sb.append(text.charAt(j));
@@ -142,7 +170,9 @@ public class part3 {
         return sb.toString();
     }
     
-    // calculate frequencies
+  /*
+   * Calculates frequencies for each letter for the given text
+   */
     private static double[] calculateFrequencies(String text) {
         double[] freq = new double[26];
         int total = text.length();
