@@ -209,6 +209,7 @@ public class part3 {
    */
     private static double dotProduct(double[] v1, double[] v2) {
         double sum = 0;
+        // dot product of two vectors v1 and v2, which are arrays of 26
         for (int i = 0; i < 26; i++) {
             sum += v1[i] * v2[i];
         }
