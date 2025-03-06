@@ -188,7 +188,9 @@ public class part3 {
         return freq;
     }
     
-    // Shift frequencies by g, from 0 to 25 and return the new 
+    /*
+     *  Shift frequencies by g, from 0 to 25 and return the new 
+     */ 
     private static double[] shiftFrequencies(double[] freq, int shift) {
         double[] shifted = new double[26];
         
