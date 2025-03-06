@@ -1,12 +1,22 @@
 Part 1
- want the IC of each substring and average
     Step 1: m = 6
-    y_1 = 
-    IC = 
-Key Length of 6
-Substring 1 with Index of Coincidence of 0.0430622009569378: KSVBLFUSAQKAJMKGODVFQVFEMLHNVKPEMMIKWUMTKQTAVVHWIFLEQGLBPVPXHLIRATARJAOEOILWHTFPWXOYTQTMGGYYKGZITYRFPTGOLKDPQAMCFAGIGAMLAGLGNYVAGLVYNTTUIKQIRNNLLGBVAPAGOBJLFWAWCFKYVBJYIYCMKSWRKQCXLHKNVCFTNRWYVZGHITDWUHNKWAPPMH
-Substring 2 with Index of Coincidence of 0.04269765322396901: BIGKJWDYKHVMMWSJOGMMWBRSPBKKLUWCOLDLIKKINWYJACZKFZIGEAAFJVAQIHJOQJUITWUREVMLUYTAPNBCYKQEQGDYFFVXHFNDGGQHSIVAEMGGPJVYBGWHFHGWBVWKKVPRZUVKPLPLHVWVKGARMUVOAWHSWPMXKHKAIVRECIFTIIZXVXNKBUBVZUCTOFVWGWGVGCSWMKDSTAQAKG
-Substring 3 with Index of Coincidence of 0.040054682159945315: WNWUGEPUNIANGVGYVAPPOSHCETWTNYUQKMXGUKJUTGEMDTGBMWIDSHMHJLEFEZWLYRMHTYEHLATVKJITKCBXKIGGEARZZUZNBMSIMUEZMFWTWEQGAMNSUOVAHIJVLTSBZZPATFUVQRMAQLKZWAGWYYAQQKGYTOTSEOQKJFIBNIUKHXMVMKLQVXSVVGEBXDNNWKMBWCKLUWBSOEMCBE
+        y_1 = KSVBLFUSAQKAJMKGODVFQVFEMLHNVKPEMMIKWUMTKQTAVVHWIFLEQGLBPVPXHLIRATARJAOEOIL
+                WHTFPWXOYTQTMGGYYKGZITYRFPTGOLKDPQAMCFAGIGAMLAGLGNYVAGLVYNTTUIKQIRNNLLGBV
+                APAGOBJLFWAWCFKYVBJYIYCMKSWRKQCXLHKNVCFTNRWYVZGHITDWUHNKWAPPMH
+        IC = 0.0430622009569378 
+        
+        y_2 = 
+        IC = 0.040054682159945315
+
+        y_2 = 
+        IC =
+
+        y_2 = 
+        IC =
+
+        y_2 = 
+        IC = 
+Substring 3 with Index of Coincidence of: WNWUGEPUNIANGVGYVAPPOSHCETWTNYUQKMXGUKJUTGEMDTGBMWIDSHMHJLEFEZWLYRMHTYEHLATVKJITKCBXKIGGEARZZUZNBMSIMUEZMFWTWEQGAMNSUOVAHIJVLTSBZZPATFUVQRMAQLKZWAGWYYAQQKGYTOTSEOQKJFIBNIUKHXMVMKLQVXSVVGEBXDNNWKMBWCKLUWBSOEMCBE
 Substring 4 with Index of Coincidence of 0.04456596035543404: WEDVWKIHWIEACCYOMELUMOWYRWFVBKCKNTKEUIUSVNXGYCUJMEFGKJVTHWLJGFCAVHVWLWIQHFNQGMEUSMJGLVNDSUQTLOZAJPBLYKFMZTLXZGEAWWCIWVWVKITHGBNSAVGWBGUXKSFILTMVKYBVTUCANMMWCYLNIXGBVMEKTMIKLTPKSBZEIZMWZWZGKTZCUFUVWUYYLVJGJVIFGW
 Substring 5 with Index of Coincidence of 0.04333561175666439: MXMBEDAUWLASFTBAWLDZTMPKCRMFKBFBVKQWVLUIDQVFKYFWPMBMCFWQDOWYLWNWPLXUMTTVAHZORIFLSCLPIXLGKGPVAKMVOGABJLVKGVKWZDSRMKLLVZOIMNUILCALFNCUKWVTBIGXQNSXJAJCKJFEWJGGKYFWVUKUMJSUKILIRGCMEWJGUPPXGMUTCOTDIXLHXWSIKWGLBGFUUI
 Substring 6 with Index of Coincidence of 0.045158350421508314: RVLSUCKOBXLYUAJWKWIFOQAXFGTKGOTSMJFXMALYRJVMNLPTLEKGGGTYKMLLLIQTIBTYUWGWVKWVLKCBVNYWTKAMCCLFMXSMYVKWXGNFKGWOLGKJTDASEFEVPBFIYTGLXWIYLVMRANEWNTGACKWVIXGAKSGIBLMXAWSHKNUHAAAUHRLUTFDYFKCVVGYLFTBEFBRGWMUOITJUBMSIYQ
@@ -40,19 +50,19 @@ Part 3
     Keyword: RUSTICS
 
     The department of justice has been and will always be committed to protecting the liberty 
-    and security of those whom we serve. In recent months however, we have on a new scale 
+    and security of those whom we serve. In recent months, however, we have on a new scale 
     seen mainstream products and services designed in a way that gives users sole control over 
     access to their data. As a result, law enforcement is sometimes unable to recover the 
     content of electronic communications from the technology provider even in response to a 
-    court order or duly authorized warrant issued by a federal judge for example many 
+    court order or duly authorized warrant issued by a federal judge. For example, many 
     communications services now encrypt certain communications by default with the key necessary 
-    to decrypt the communications solely in the hands of the enduser this applies both when the 
-    data is in motion over electronic networks or at rest on an electronic device if the 
-    communications provider is served with a warrant seeking those communications the provider 
+    to decrypt the communications solely in the hands of the enduser. This applies both when the 
+    data is in motion over electronic networks or at rest on an electronic device. If the 
+    communications provider is served with a warrant seeking those communications, the provider 
     cannot provide the data because it has designed the technology such that it cannot be 
-    accessed by any third party we do not have any silver bullets and the discussions with in 
-    the executive branch are still on going while there has not yet been a decision whether to 
-    seek legislation we must work with congress industry academics privacy groups and others 
+    accessed by any third party. We do not have any silver bullets and the discussions with in 
+    the executive branch are still on going. While there has not yet been a decision whether to 
+    seek legislation, we must work with congress, industry, academics, privacy groups, and others 
     to craft anapproach that addresses all of the multiple competing concerns that have been the 
-    focus of so much debate but we can all agree that we will need on going honest and informed 
+    focus of so much debate. But we can all agree that we will need on going honest and informed 
     public debate about how best to protect liberty and security in both our laws and our technology.
