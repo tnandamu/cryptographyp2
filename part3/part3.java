@@ -176,10 +176,12 @@ public class part3 {
     private static double[] calculateFrequencies(String text) {
         double[] freq = new double[26];
         int total = text.length();
+
         // gets frequency count of each letter in the text
         for (char c : text.toCharArray()) {
             freq[c - 'A']++;
         }
+        
         // divides the freq count array by the length of subtext to get frequency
         for (int i = 0; i < 26; i++) {
             freq[i] /= total;
@@ -189,11 +191,12 @@ public class part3 {
     }
     
     /*
-     *  Shift frequencies by g, from 0 to 25 and return the new 
+     *  Shift frequencies by g, from 0 to 25 and return the new index/number value
      */ 
     private static double[] shiftFrequencies(double[] freq, int shift) {
         double[] shifted = new double[26];
         
+        // shift frequencies through 0 to 25
         for (int i = 0; i < 26; i++) {
             shifted[i] = freq[(i + shift) % 26];
         }
@@ -201,7 +204,9 @@ public class part3 {
         return shifted;
     }
     
-    // Calculate dot product
+  /*
+   * Calculates the dot product
+   */
     private static double dotProduct(double[] v1, double[] v2) {
         double sum = 0;
         for (int i = 0; i < 26; i++) {
@@ -210,24 +215,32 @@ public class part3 {
         return sum;
     }
 
+    /*
+     * Decrypts ciphertext using Vigenère Cipher
+     */
     public static String decrypt(String ciphertext, String key) {
         StringBuilder plaintext = new StringBuilder();
         key = key.toLowerCase();
         int keyLength = key.length();
 
+        // Loop through each character in the ciphertext
         for (int i = 0; i < ciphertext.length(); i++) {
             char cipherChar = ciphertext.charAt(i);
 
+            // Check if the character is a letter
             if (Character.isLetter(cipherChar)) {
-                int cipherIndex = cipherChar - 'A';
-                int keyIndex = key.charAt(i % keyLength) - 'a';
-                int plainIndex = (cipherIndex - keyIndex + 26) % 26;
-                char plainChar = (char) (plainIndex + 'a');
+                int cipherIndex = cipherChar - 'A';     // Convert to cipher text into index
+                int keyIndex = key.charAt(i % keyLength) - 'a';     // Convert to key into index
+                int plainIndex = (cipherIndex - keyIndex + 26) % 26;    //  finding the plain text using the ciper and key indexes
+                char plainChar = (char) (plainIndex + 'a');         // Convert back to character
+
+                // Append the decrypted character to the plaintext
                 plaintext.append(plainChar);
             } else {
                 plaintext.append(cipherChar);
             }
         }
+        
         return plaintext.toString();
     }
 }
