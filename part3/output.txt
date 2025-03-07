@@ -113,7 +113,11 @@ Part 1
 
         Average IC = 0.042984 (difference from expected: 0.022016)   
 
-    Step 4: Yes, the outputs verify that m = 7 is the correct guess.  A completely random string in English will have an index of coincidence of about 0.038.  For m = 6 and m = 8, the index of coincidence for all substrings is less than 0.05.  The index of coincidence for all substrings for m = 7 is greater than 0.06 and for some substrings it is greater than 0.07 confirming that m = 7 is the correct guess.
+    Step 4: Yes, the outputs verify that m = 7 is the correct guess.  A completely random
+string in English will have an index of coincidence of about 0.038.  For m = 6 and m = 8,
+the index of coincidence for all substrings is less than 0.05.  The index of coincidence
+for all substrings for m = 7 is greater than 0.06 and for some substrings it is greater
+than 0.07 confirming that m = 7 is the correct guess.
 
 
 Part 2 
